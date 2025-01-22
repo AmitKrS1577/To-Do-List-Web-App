@@ -6,15 +6,18 @@
 <ul>
     <!-- Loop through each task and display it -->
     {% for task in tasks %}
-    <li>
+    <li class="task-item {% if task['completed'] %}completed{% endif %}">
         <div>
             <strong>{{ task.title }}</strong><br> <!-- Display task title -->
             <small>{{ task.description }}</small> <!-- Display task description -->
         </div>
-        <div>
+        <div class="task-actions">
             <!-- Links to edit and delete the task -->
-            <a href="{{ url_for('edit_task', task_id=task.id) }}">Edit</a>
-            <a href="{{ url_for('delete_task', task_id=task.id) }}">Delete</a>
+            {% if not task['completed'] %}
+            <a href="{{ url_for('mark_complete', task_id=task['id']) }}" class="btn btn-success">Mark as Complete</a>
+            <a href="{{ url_for('edit_task', task_id=task.id) }}" class="btn btn-primary">Edit</a>
+            {% endif %}
+            <a href="{{ url_for('delete_task', task_id=task.id) }}" class="btn btn-danger">Delete</a>
         </div>
     </li>
     {% endfor %}
