@@ -69,13 +69,8 @@ li strong {
 li a {
     margin-left: 1rem;
     text-decoration: none;
-    color: #007BFF;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-li a:hover {
-    color: #0056b3;
 }
 
 /* Form styling */
@@ -133,3 +128,33 @@ li:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.task-item.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #155724;
+}
+
+.task-actions .btn-success {
+    color: #28a745;
+}
+
+.task-actions .btn-success:hover {
+    color: #218838;
+}
+
+.task-actions .btn-primary {
+    color: #007bff;
+}
+
+.task-actions .btn-primary:hover {
+    color: #0056b3;
+}
+
+.task-actions .btn-danger {
+    color: #dc3545;
+}
+
+.task-actions .btn-danger:hover {
+    color: #a71d2a;
+} 
