@@ -62,6 +62,13 @@ def delete_task(task_id):
     tasks = [t for t in tasks if t["id"] != task_id]
     return redirect(url_for("index"))
 
+@app.route("/complete/<int:task_id>")
+def mark_complete(task_id):
+    task = next((t for t in tasks if t["id"] == task_id), None)
+    if task:
+        task["completed"] = True
+    return redirect(url_for("index"))
+
 if __name__ == "__main__":
     # Run the application in debug mode
     app.run(debug=True)
