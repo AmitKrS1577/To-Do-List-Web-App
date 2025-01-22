@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Task</h2>
+<!-- Form to edit an existing task -->
+<form method="POST">
+    <label for="title">Task Title:</label> <!-- Label for the task title -->
+    <input type="text" id="title" name="title" value="{{ task.title }}" required> <!-- Pre-filled input for task title -->
+
+    <label for="description">Description:</label> <!-- Label for the task description -->
+    <input type="text" name="description" value="{{ task.description }}"> <!-- Pre-filled input for description -->
+
+    <button type="submit">Update Task</button> <!-- Submit button -->
+</form>
+{% endblock %}
