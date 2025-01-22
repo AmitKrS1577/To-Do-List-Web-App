@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Header with the application title and navigation links -->
+    <header>
+        <h1>To-Do List</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('add_task') }}">Add Task</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Placeholder for content specific to each page -->
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
