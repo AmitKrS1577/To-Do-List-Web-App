@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Task List</h2>
+<!-- Check if there are any tasks -->
+{% if tasks %}
+<ul>
+    <!-- Loop through each task and display it -->
+    {% for task in tasks %}
+    <li>
+        <div>
+            <strong>{{ task.title }}</strong><br> <!-- Display task title -->
+            <small>{{ task.description }}</small> <!-- Display task description -->
+        </div>
+        <div>
+            <!-- Links to edit and delete the task -->
+            <a href="{{ url_for('edit_task', task_id=task.id) }}">Edit</a>
+            <a href="{{ url_for('delete_task', task_id=task.id) }}">Delete</a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No tasks yet. Click "Add Task" to get started!</p> <!-- Message if no tasks exist -->
+{% endif %}
+{% endblock %}
