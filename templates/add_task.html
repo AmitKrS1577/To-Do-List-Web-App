@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add New Task</h2>
+<!-- Form to add a new task -->
+<form method="POST">
+    <label for="title">Task Title:</label> <!-- Label for the task title -->
+    <input type="text" id="title" name="title" placeholder="Enter task title" required> <!-- Input for task title -->
+
+    <label for="description">Description:</label> <!-- Label for the task description -->
+    <input type="text" name="description" placeholder="Enter task description"> <!-- Input for description -->
+
+    <button type="submit">Add Task</button> <!-- Submit button -->
+</form>
+{% endblock %}
