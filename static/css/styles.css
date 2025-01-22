@@ -1,0 +1,135 @@
+/* Basic styling for the body */
+body {
+    font-family: 'Lucida Handwriting', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #fafaef;
+    color: #000000;
+}
+
+/* Header styles */
+header {
+    background-color: #3b3b3b;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+/* Navigation links */
+nav a {
+    margin: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: #FFD700;
+    text-decoration: underline
+}
+
+/* Main content area */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Task list styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: rgb(233, 242, 248);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li strong {
+    font-size: 1.2rem;
+}
+
+li a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+li a:hover {
+    color: #0056b3;
+}
+
+/* Form styling */
+form {
+    background-color: rgb(249, 235, 235);
+    padding: 2rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+form input {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+}
+
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+::placeholder {
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Task card hover effect */
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
