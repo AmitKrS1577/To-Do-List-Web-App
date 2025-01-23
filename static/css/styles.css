@@ -141,6 +141,7 @@ li:hover {
 
 .task-actions .btn-success:hover {
     color: #218838;
+    font-size: 1.2rem;
 }
 
 .task-actions .btn-primary {
@@ -149,6 +150,7 @@ li:hover {
 
 .task-actions .btn-primary:hover {
     color: #0056b3;
+    font-size: 1.2rem;
 }
 
 .task-actions .btn-danger {
@@ -157,4 +159,5 @@ li:hover {
 
 .task-actions .btn-danger:hover {
     color: #a71d2a;
+    font-size: 1.2rem;
 } 
